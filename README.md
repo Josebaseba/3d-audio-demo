@@ -2,7 +2,7 @@
 3D AUDIO DEMO
 =====
 
-Live demo: audio.josebaseba.com
+Live demo: https://audio.josebaseba.com
 
 Just download the repository and exec the following:
 
