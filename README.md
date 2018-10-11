@@ -1,6 +1,6 @@
 
 3D AUDIO DEMO
-#####
+=====
 
 Just download the repository and exec the following:
 
