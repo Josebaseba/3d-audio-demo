@@ -1,0 +1,15 @@
+{
+  "name": "3d-audio-demo",
+  "version": "1.0.0",
+  "description": "Run real-time pose estimation in the browser using TensorFlow.js.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
