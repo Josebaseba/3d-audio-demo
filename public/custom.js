@@ -1,4 +1,4 @@
-(((() => {
+(() => {
 
   const song = new Howl({
     src: ['push-off.mp3']
