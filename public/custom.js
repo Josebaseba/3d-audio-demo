@@ -1,4 +1,4 @@
-(() => {
+(((() => {
 
   const song = new Howl({
     src: ['push-off.mp3']
@@ -13,7 +13,7 @@
     const notStraightFace = x - y > 0.3 || y - x > 0.3
     const notStraightEyes = leftEye - rightEye > 0.01 || rightEye - leftEye > 0.01
 
-    let distanceFromScreen = nose - leftEyePos;
+    let distanceFromScreen = nose - leftEyePos
     let volume = distanceFromScreen / 100
     if (volume > 1) { volume = 1 }
 
@@ -32,12 +32,12 @@
 
   });
 
-  const __linear_transform = (from_min, from_max, to_min, to_max)=>{
-    return (value)=>(value - from_min) * ((to_max-to_min) / (from_max-from_min)) + to_min;
+  const __linearTransformation = (fromMin, fromMax, toMin, toMax) => {
+    return (value) => (value - fromMin) * ((toMax - toMin) / (fromMax - fromMin)) + toMin
   }
 
-  const __parseScore = __linear_transform(0,1, -2,2);
+  const __parseScore = __linearTransformation(0, 1, -2, 2)
 
-  const __parseNosePosition = __linear_transform(0,500, -1,1);
+  const __parseNosePosition = __linearTransformation(0, 500, -1, 1)
 
 })()
