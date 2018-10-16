@@ -32,42 +32,12 @@
 
   });
 
-  const __parseScore = (score) => {
-    if (score > 0.9) {
-      score = 2
-    } else if (score > 0.8) {
-      score = 1.5
-    } else if (score > 0.7) {
-      score = 1
-    } else if (score > 0.6) {
-      score = 0.5
-    } else if (score > 0.5) {
-      score = 0
-    } else if (score > 0.4) {
-      score = -0.5
-    } else if (score > 0.3) {
-      score = -1
-    } else if (score > 0.2) {
-      score = -1.5
-    } else {
-      score = -2
-    }
-    return score
+  const __linear_transform = (from_min, from_max, to_min, to_max)=>{
+    return (value)=>(value - from_min) * ((to_max-to_min) / (from_max-from_min)) + to_min;
   }
 
-  const __parseNosePosition = (pos) => {
-    if (pos < 100) {
-      pos = -1
-    } else if (pos < 200) {
-      pos = -0.5
-    } else if (pos < 300) {
-      pos = 0
-    } else if (pos < 400) {
-      pos = 0.5
-    } else {
-      pos = 1
-    }
-    return pos
-  }
+  const __parseScore = __linear_transform(0,1, -2,2);
+
+  const __parseNosePosition = __linear_transform(0,500, -1,1);
 
 })()
